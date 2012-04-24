@@ -1,6 +1,6 @@
 {   "name" : "jscrape",
     "version" : "0.0.2",
-    "description" : "jsdom + jquery + request for the lazy",
+    "description" : "jsdom + request + jquery for the truly lazy",
     "keywords" : [ "jquery", "scrape" ],
     "main" : "./index.js",
     "dependencies" : {

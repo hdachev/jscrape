@@ -1,4 +1,4 @@
-# jscrape = jsdom + jquery + request for the truly lazy
+# jscrape = jsdom + request + jquery for the truly lazy
 
 
 ### Install
