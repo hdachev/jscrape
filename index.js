@@ -2,7 +2,7 @@
 
 var request     = require ( 'request' ),
     jsdom       = require ( 'jsdom' ),
-    jquery      = require ( 'jquery' ),
+    jquery      = require ( './jquery' ),
     jscrape;
 
 module.exports = jscrape = function ( options, callback )
