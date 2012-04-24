@@ -17,8 +17,8 @@ where `$` is the jQuery object for the parsed page:
 var jscrape = require ( './index' );
 jscrape ( 'http://www.google.com', function ( error, $, response, body ) {
     if ( !error && $ ) {
-        // print the innerHTML of the lucky button.
-        console.log( $( 'button:contains("Lucky")' ).html () )
+        // Print the innerHTML of the I'm Feeling Lucky button.
+        console.log( $( 'button[onclick^=if]' ).html () )
     }
 })
 ```
