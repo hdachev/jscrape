@@ -63,9 +63,10 @@ Enjoy!
 
 ### Workaround for npm trouble with contextify on windows
 
-If you can't `npm install jscrape`
-because of contextify failing to build on windows,
-clone the `contextify` repo under `your_project/node_modules/contextify`
+If you can't `npm install jscrape` on windows
+because of contextify failing to build,
+clone the `contextify` repo under
+`your_project/node_modules/contextify`
 and replace the contents of `lib/contextify.js`
 with the following:
 
@@ -77,4 +78,5 @@ module.exports = function ( obj ) {
 };
 ```
 
-That should work just fine.
+Now `npm install jscrape`
+in your project folder should work just fine.
