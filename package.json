@@ -1,0 +1,11 @@
+{   "name" : "jscrape",
+    "version" : "0.0.1",
+    "description" : "jsdom + jquery + request for the lazy",
+    "keywords" : [ "jquery", "scrape" ],
+    "main" : "./index.js",
+    "dependencies" : {
+        "jquery" : ">= 1.6.3",
+        "jsdom" : ">= 0.2.14",
+        "request" : ">= 2.9.202"
+    }
+}
