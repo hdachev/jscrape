@@ -3,8 +3,12 @@
     "description" : "jsdom + request + jquery for the truly lazy",
     "keywords" : [ "jquery", "scrape" ],
     "main" : "./index.js",
-    "dependencies" : {
-        "jsdom" : ">= 0.2.14",
+    "dependencies" :
+    {   "jsdom" : ">= 0.2.14",
         "request" : ">= 2.9.202"
+    },
+    "repository" :
+    {   "type" : "git",
+        "url" : "git://github.com/hdachev/jscrape.git"
     }
 }
