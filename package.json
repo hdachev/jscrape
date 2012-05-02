@@ -1,5 +1,5 @@
 {   "name" : "jscrape",
-    "version" : "0.0.2",
+    "version" : "0.0.3",
     "description" : "jsdom + request + jquery for the truly lazy",
     "keywords" : [ "jquery", "scrape" ],
     "main" : "./index.js",
