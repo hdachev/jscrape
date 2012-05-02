@@ -23,9 +23,14 @@ module.exports = jscrape = function ( options, callback )
             try
             {
                 t0     = Date.now ();
-                window = jsdom.jsdom ( body ).createWindow ();
+                window = jsdom.jsdom
+                    ( body, null, options.eval
+                        ? null : { features: { 'FetchExternalResources' : false, 'ProcessExternalResources' : false } }
+                    ).createWindow ();
+
                 t1     = Date.now ();
                 $      = jquery.create ( window );
+
                 t2     = Date.now ();
             }
             catch ( e )
