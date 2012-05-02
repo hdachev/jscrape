@@ -16,10 +16,34 @@ module.exports = jscrape = function ( options, callback )
 
     request ( options, function ( err, response, body )
     {
-        if ( !err && response.statusCode == 200 )
-            callback ( null, jquery.create ( jsdom.jsdom ( body ).createWindow () ), response, body );
+        var t0, t1, t2,
+            window, $;
+
+        if ( !err )
+            try
+            {
+                t0     = Date.now ();
+                window = jsdom.jsdom ( body ).createWindow ();
+                t1     = Date.now ();
+                $      = jquery.create ( window );
+                t2     = Date.now ();
+            }
+            catch ( e )
+            {
+                err = e;
+                return;
+            }
+
+        if ( !err )
+        {
+            if ( jscrape.debug_mode )
+                console.log ( options.url || options.uri, body.length, 'jsdom:', t1 - t0, 'jquery:', t2 - t1 );
+
+            callback ( null, $, response, body );
+        }
+
         else
-            callback ( err || response.statusCode, null, response, body );
+            callback ( err, null, response, body );
     });
 };
 
