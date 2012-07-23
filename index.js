@@ -25,7 +25,7 @@ module.exports = jscrape = function ( options, callback )
                 t0     = Date.now ();
                 window = jsdom.jsdom
                     ( body, null, options.eval
-                        ? null : { features: { 'FetchExternalResources' : false, 'ProcessExternalResources' : false } }
+                        ? null : { features : { 'FetchExternalResources' : false, 'ProcessExternalResources' : false } }
                     ).createWindow ();
 
                 t1     = Date.now ();
