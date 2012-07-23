@@ -14,7 +14,7 @@ and a `function(err, $, response, body)` callback,
 where `$` is the jQuery object for the parsed page:
 
 ```javascript
-var jscrape = require ( './index' );
+var jscrape = require ( 'jscrape' );
 jscrape ( 'http://www.google.com', function ( error, $, response, body ) {
     if ( !error && $ ) {
         // Print the innerHTML of the I'm Feeling Lucky button.
@@ -26,7 +26,7 @@ jscrape ( 'http://www.google.com', function ( error, $, response, body ) {
 Or just use a `function(err, $)`-style callback:
 
 ```javascript
-var jscrape = require ( "./index" );
+var jscrape = require ( 'jscrape' );
 function getNews ( callback ) {
     jscrape ( 'http://news.ycombinator.com/', function ( err, $ ) {
         // jquery to the rescue
